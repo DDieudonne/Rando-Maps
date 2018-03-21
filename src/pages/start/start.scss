@@ -1,0 +1,59 @@
+page-start {
+    *{
+    font-family: 'IBM Plex Sans Condensed', sans-serif;
+    }
+    .wallpaper{
+    background-size: cover;
+    background-image: url('../../assets/imgs/walking.jpg');
+    }
+.filter{
+    background: -webkit-linear-gradient(to left, rgba(248, 54, 0, 0.4259), rgba(254, 140, 0, 0.259));  
+    background: linear-gradient(to left, rgba(248, 54, 0, 0.259), rgba(254, 140, 0, 0.259)); 
+    height: 100vh;
+    position: relative;
+}
+.title{
+color: #fff;
+height: 100vh;
+display: flex;
+justify-content: center;
+flex-direction: column;
+z-index: 100;
+align-items: center;
+position: relative;
+img{
+width: 30%;
+}
+h5{
+    color: #69F0AE;
+}
+}
+
+
+.wallpaper2{
+    background-size: cover;
+    background-image: url('../../assets/imgs/man.jpg');
+    }
+.filter2{
+    background: -webkit-linear-gradient(to left, rgba(248, 54, 0, 0.4259), rgba(254, 140, 0, 0.259));  
+    background: linear-gradient(to left, rgba(248, 54, 0, 0.259), rgba(254, 140, 0, 0.259)); 
+    height: 100vh;
+    position: relative;
+}
+.title2{
+color: #fff;
+height: 100vh;
+display: flex;
+justify-content: center;
+flex-direction: column;
+z-index: 100;
+align-items: center;
+position: relative;
+img{
+width: 30%;
+}
+button{
+    color:black;
+}
+}
+}
