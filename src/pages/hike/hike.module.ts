@@ -3,23 +3,23 @@ import { IonicPageModule } from 'ionic-angular';
 import { HikePage } from './hike';
 import { HikeDetailsPage } from './hike-details/hike-details';
 import { HikeCurrentPage } from './hike-current/hike-current';
-import { StartPage } from '../start/start';
+import { Start } from '../start/start';
 
 @NgModule({
   declarations: [
     HikePage,
     HikeCurrentPage,
     HikeDetailsPage,
-    StartPage
+    Start
   ],
   entryComponents: [
     HikeCurrentPage,
     HikeDetailsPage,
-    StartPage
+    Start
   ],
   imports: [
     IonicPageModule.forChild(HikePage),
   ],
-  providers:[]
+  providers: []
 })
-export class HikePageModule {}
+export class HikePageModule { }

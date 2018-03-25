@@ -6,7 +6,7 @@ import { HikePage } from '../hike/hike';
   selector: 'page-start',
   templateUrl: 'start.html',
 })
-export class StartPage {
+export class Start {
 
   constructor(
     public navCtrl: NavController,
@@ -14,7 +14,7 @@ export class StartPage {
   ) { }
 
   goHikePage() {
-    this.navCtrl.setRoot(HikePage)
+    this.navCtrl.setRoot(HikePage);
   }
 
 }

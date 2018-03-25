@@ -1,18 +1,44 @@
-<!--
-  Generated template for the HikeCurrentPage page.
-
-  See http://ionicframework.com/docs/components/#navigation for more info on
-  Ionic pages and navigation.
--->
 <ion-header>
 
   <ion-navbar>
-    <ion-title>hike-current</ion-title>
+    <button color="light" ion-button icon-only (click)="back()">
+      <ion-icon name="arrow-dropleft"></ion-icon>
+    </button>
+    <ion-title>{{hikeCurrent?.name}} en cours...</ion-title>
   </ion-navbar>
 
 </ion-header>
 
 
 <ion-content padding>
+
+  <div [formGroup]="currentForm" text-center>
+    <ion-item>
+      <ion-label floating>Difficulté</ion-label>
+      <ion-select cancelText="Annuler" okText="Valider" interface="action-sheet" formControlName="difficultControl">
+        <ion-option *ngFor="let difficulty of difficulties" [value]="difficulty.value">{{ difficulty.viewValue }}</ion-option>
+      </ion-select>
+    </ion-item>
+    <div *ngIf="difficultControl.touched && difficultControl.invalid" text-center style="color:red;text-align:center;margin-top:5px">
+      Veuillez selectionner une difficulté
+    </div>
+    <ion-item>
+      <ion-label floating>Remarques</ion-label>
+      <ion-textarea formControlName="remarkControl">
+      </ion-textarea>
+    </ion-item>
+    <div *ngIf="remarkControl.touched && remarkControl.invalid" text-center style="color:red;text-align:center;margin-top:5px">
+      Veuillez ecrire une remarque
+    </div>
+    <ion-item>
+      <ion-label>Date</ion-label>
+      <ion-datetime cancelText="Annuler" doneText="Valider" displayFormat=" DD MMM , YYYY HH:mm" formControlName="dateControl"></ion-datetime>
+    </ion-item>
+    <div *ngIf="dateControl.touched && dateControl.invalid" text-center style="color:red;text-align:center;margin-top:15px;margin-bottom:10px">
+      Veuillez selectionner une date
+    </div>
+    <button type="submit" class="submitForm" color="purpleOriginal" ion-button round text-center [disabled]="currentForm.invalid"
+      (click)="validateButton(currentForm)">Ajouter</button>
+  </div>
 
 </ion-content>

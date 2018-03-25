@@ -15,7 +15,12 @@ import { HikePageModule } from '../pages/hike/hike.module';
   imports: [
     BrowserModule,
     HttpModule,
-    IonicModule.forRoot(MyApp),
+    IonicModule.forRoot(MyApp, {
+      backButtonText: '',
+      modalEnter: 'modal-slide-in',
+      modalLeave: 'modal-slide-out',
+      pageTransition: 'ios-transition'
+    }),
     HikePageModule
   ],
   bootstrap: [IonicApp],

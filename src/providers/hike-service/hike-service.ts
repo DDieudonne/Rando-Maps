@@ -7,9 +7,7 @@ export class HikeServiceProvider {
 
   url = '../../assets/api/hike.json';
 
-  constructor(public http: Http) {
-    console.log('url', this.url);
-  }
+  constructor(public http: Http) {}
 
   getHikes() {
     return this.http.get(this.url).map(res => res.json());
